@@ -60,6 +60,13 @@ resource "aws_security_group" "nginx-webserver" {
     cidr_blocks = [var.PvtIp]
   }
 
+ingress {
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = [var.jenkinsIp]
+  }
+
   egress {
     from_port   = 0
     to_port     = 0
