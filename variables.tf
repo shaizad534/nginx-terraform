@@ -47,7 +47,7 @@ variable "PvtIp" {
 
 variable "jenkinsIp" {
   description = " jenkins IP to be allowed SSH for"
-  default     = "54.93.194.138"
+  default     = "54.93.194.138/32"
 }
 
 variable "PocIp" {
